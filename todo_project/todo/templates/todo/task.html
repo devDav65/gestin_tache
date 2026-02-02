@@ -170,7 +170,7 @@
             name="recherche" 
             id="recherche"
             placeholder="Tapez le titre ou la description d'une tâche..." 
-            value="{{ query }}"
+            value="{{ query|default:'' }}"
             class="search-input w-full px-4 py-3 pl-12 border-2 border-slate-200 rounded-xl focus:border-purple-500 transition-all duration-200 text-slate-700 placeholder-slate-400"
           />
           <span class="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400 text-xl">

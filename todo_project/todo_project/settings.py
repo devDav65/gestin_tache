@@ -29,6 +29,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["192.168.1.73", "127.0.0.1", "localhost"]
 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
 
 # Application definition
 
