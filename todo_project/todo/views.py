@@ -10,7 +10,7 @@ from .forms import TaskForm
 @login_required(login_url="login_user")
 def list_task (request):
     user = request.user
-    tasks = Task.objects.filter(proprio=request.user).order_by('date_creation')
+    tasks = Task.objects.filter(proprio=user).order_by('date_creation')
 
     total_tasks = tasks.count()
     completeds_tasks = tasks.filter(completed = True).count()
